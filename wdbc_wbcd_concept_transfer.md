@@ -1,10 +1,8 @@
 ```python
 # ============================================================
-# WDBC  ↔  WBCD  Concept-Level Transfer  (v2)
+# WDBC  ↔  WBCD  Concept-Level Transfer
 # ============================================================
 #
-# Narrative
-# ---------
 # Both datasets come from Dr. Wolberg's FNA lab (UW Madison) but
 # share NO common features:
 #   WDBC (1995) — 30 continuous image-derived measurements
@@ -14,18 +12,6 @@
 # maps both feature spaces into a shared representation, then
 # train a classifier on one dataset and evaluate it on the other
 # — a genuine zero-shot cross-dataset transfer.
-#
-# Improvements over v1
-# --------------------
-# 1. All 6 classifiers tested (not just LR)
-# 2. Permutation baseline: shuffled concept assignments
-#    quantify how much the *structure* of the bridge matters
-# 3. Bootstrap CI on every transfer AUC (1 000 resamples)
-# 4. Asymmetry analysis: why WDBC→WBCD > WBCD→WDBC?
-# 5. Calibration plots (reliability diagrams) for both directions
-# 6. Bridge validation: within-concept correlation check
-# 7. Explicit label-orientation asserts to prevent silent flips
-# 8. Closing written summary
 #
 # Label convention (consistent throughout this notebook)
 # -------------------------------------------------------
